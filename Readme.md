@@ -39,11 +39,8 @@ BASE_URL_FE=http://localhost:3000
 Navigate to the backend directory and run the following commands:
 
 ```bash
-# init go
+# install depedencies go
 go mod tidy
-
-# Install dependencies
-go get .
 
 # Run the application
 go run ./src/main.go
