@@ -20,3 +20,10 @@ type ParamsCreateUser struct {
 	Email string
 	Token string
 }
+
+type UserSearchFilter struct {
+	Page   int
+	Limit  int
+	Offset int
+	Search string
+}

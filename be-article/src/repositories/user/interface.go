@@ -17,6 +17,8 @@ type UserRepository interface {
 	IsExists(*entities.ParamsCreateUser) (bool, error)
 	UpdateResetToken(userID int64, token string, expiry time.Time) error
 	UpdatePassword(userId int64, password string) error
+	FindMany(filters *entities.UserSearchFilter) ([]*entities.User, error)
+	Count(filters *entities.UserSearchFilter) (int, error)
 }
 
 func New(db *sql.DB) UserRepository {

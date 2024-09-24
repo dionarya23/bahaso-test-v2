@@ -1,6 +1,7 @@
 package userusecase
 
 import (
+	"github.com/dionarya23/be-article/src/entities"
 	user "github.com/dionarya23/be-article/src/repositories/user"
 )
 
@@ -13,6 +14,7 @@ type UserUsecase interface {
 	Login(*ParamsLogin) (*ResultLogin, error)
 	ForgotPassword(string) (bool, error)
 	ChangePassword(string, string) (bool, error)
+	FindMany(*entities.UserSearchFilter) (interface{}, error)
 }
 
 func New(

@@ -25,6 +25,7 @@ type iV1User interface {
 	Login(c echo.Context) error
 	ForgotPassword(c echo.Context) error
 	ChangePassword(c echo.Context) error
+	FindMany(c echo.Context) error
 }
 
 func New(v1User *V1User) iV1User {
