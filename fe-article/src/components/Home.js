@@ -7,7 +7,7 @@ function Home() {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-
+// dsads
   useEffect(() => {
     fetchArticles(currentPage);
   }, [currentPage]);
